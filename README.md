@@ -25,7 +25,6 @@ As you may have noticed, each main part has his own project, and each sub part h
 
 # Points of interests
   
-#### (Parts that may interest you)
 As there isn't a doc (yet), here few classes that might catch your interest (non exhaustive) :
   * Executer : 
     * Implement a producer/consumer running in a single and own thread. 
