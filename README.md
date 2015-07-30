@@ -21,7 +21,7 @@ Well this is somewhat a lib to merge them all, avoiding the "stackoverflowing/go
     * Common : Classes, shortcuts, wrappers used for Xml exclusively
     * DataAccess : Classes used to have a simplified access or custom behaviour to query/manipulate data
 
-As you may have noticed, each main part has his own project, and each sub part has his own folder.
+As you may have noticed, each main part has his own project, and each sub part has its own folder.
 
 # Points of interests
   
