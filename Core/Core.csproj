@@ -48,7 +48,6 @@
     <Compile Include="Common\Id.cs" />
     <Compile Include="Common\LazyCache.cs" />
     <Compile Include="Common\Range.cs" />
-    <Compile Include="DebugTools\DebugExts.cs" />
     <Compile Include="DebugTools\DisposableStopwatch.cs" />
     <Compile Include="DebugTools\DumpObject.cs" />
     <Compile Include="Extensions\BoolExts.cs" />

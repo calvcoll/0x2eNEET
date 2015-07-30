@@ -48,15 +48,6 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\AbstractEntityViewModel.cs" />
-    <Compile Include="Common\AbstractUserControlViewModel.cs" />
-    <Compile Include="Common\AbstractViewModel.cs" />
-    <Compile Include="Common\ColumnNameAttribute.cs" />
-    <Compile Include="Common\Command.cs" />
-    <Compile Include="Common\FastObservableCollection.cs" />
-    <Compile Include="Common\HeaderedNotifiableValue.cs" />
-    <Compile Include="Common\NotifiableValue.cs" />
-    <Compile Include="Common\UserControlCommands.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

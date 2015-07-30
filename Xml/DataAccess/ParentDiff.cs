@@ -10,7 +10,7 @@ namespace DotNEET.Xml.DataAccess
     [XmlRoot("ParentDiff")]
     [XmlInclude(typeof(Guid))]
     [XmlInclude(typeof(ModifyEntry))]
-    public class ParentDiff
+    public class ParentDiff : IParentDiff
     {
         [XmlArray("Modify"), XmlArrayItem(typeof(ModifyEntry), ElementName = "ModifyEntry")]
         public List<ModifyEntry> Modify;
@@ -44,11 +44,22 @@ namespace DotNEET.Xml.DataAccess
             var removeGuids = diffs.Select(x => x.IdEntry).ToHashSet();
             this.Modify.RemoveAll(x => removeGuids.Contains(x.IdEntry)); // Avoid a diff to apply multiple time
             this.Modify.AddRange(diffs);
+            this.modifyById.Reset();
         }
 
-        public void Reset()
+        public bool IsTaggedAsRemoved(Guid id)
         {
-            this.modifyById.Reset();
+            return this.RemoveList.Contains(id);
+        }
+
+        public void TagAsRemoved(Guid id)
+        {
+            this.RemoveList.Add(id);
+        }
+
+        public bool TryGetDiff(Guid id, out ModifyEntry diff)
+        {
+            return this.ModifyById.TryGetValue(id, out diff);
         }
     }
 }

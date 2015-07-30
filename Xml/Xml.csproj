@@ -44,11 +44,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ComplexType.cs" />
-    <Compile Include="ModifyEntry.cs" />
-    <Compile Include="ModifyField.cs" />
+    <Compile Include="Common\ComplexType.cs" />
+    <Compile Include="Common\ModifyEntry.cs" />
+    <Compile Include="Common\ModifyField.cs" />
+    <Compile Include="DataAccess\DiffContextAccess.cs" />
+    <Compile Include="DataAccess\IDataContext.cs" />
+    <Compile Include="DataAccess\IParentDiff.cs" />
+    <Compile Include="DataAccess\ParentDiff.cs" />
+    <Compile Include="Migrations\IDbRoot.cs" />
+    <Compile Include="Migrations\IMigration.cs" />
+    <Compile Include="Migrations\IMigrationHistory.cs" />
+    <Compile Include="Migrations\MigrationExecuter.cs" />
+    <Compile Include="Migrations\MigrationExts.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="XmlComplexConverter.cs" />
+    <Compile Include="Common\XmlComplexConverter.cs" />
     <Compile Include="Common\XmlEntity.cs" />
     <Compile Include="Common\XmlEntityEqualityComparer.cs" />
     <Compile Include="Common\XmlFileAccess.cs" />

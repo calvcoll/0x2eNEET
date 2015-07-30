@@ -7,14 +7,15 @@ using System.Windows;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("WPF")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("0x2eNEET.WPF")]
+[assembly: AssemblyDescription("Extensions, helper and general usage classes & control for WPF")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("WPF")]
-[assembly: AssemblyCopyright("Copyright ©  2015")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCompany("Uwy - https://github.com/Uwy/")]
+[assembly: AssemblyProduct("0x2eNEET - https://github.com/Uwy/0x2eNEET")]
+[assembly: AssemblyCopyright("MIT License - Copyright © 2015")]
+[assembly: AssemblyTrademark("0x2eNEET")]
 [assembly: AssemblyCulture("")]
+
 
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 

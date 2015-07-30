@@ -7,7 +7,6 @@ namespace DotNEET.Xml.DataAccess
     {
         bool IsTaggedAsRemoved(Guid id);
         void TagAsRemoved(Guid id);
-        ModifyEntry GetDiff(Guid id);
         void AddDiffs(IEnumerable<ModifyEntry> diffs);
         bool TryGetDiff(Guid id, out ModifyEntry diff);
 
