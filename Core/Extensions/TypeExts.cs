@@ -4,12 +4,7 @@ namespace DotNEET.Extensions
 {
     public static class TypeExts
     {
-        public static bool IsNullable(this Type type)
-        {
-            return Nullable.GetUnderlyingType(type) != null;
-        }
-
-        public static T GetInstanceOrNull<T>(this Type type) 
+        public static T GetInstanceOrNull<T>(this Type type)
             where T : class
         {
             return type.GetInstanceOrNull() as T;
@@ -24,6 +19,11 @@ namespace DotNEET.Extensions
         public static bool HasEmptyContructor(this Type type)
         {
             return type.GetConstructor(Type.EmptyTypes) != null;
+        }
+
+        public static bool IsNullable(this Type type)
+        {
+            return Nullable.GetUnderlyingType(type) != null;
         }
     }
 }

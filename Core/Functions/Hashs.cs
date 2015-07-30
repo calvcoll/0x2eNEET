@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-
-namespace DotNEET.Functions
+﻿namespace DotNEET.Functions
 {
     public static class Hashs
     {

@@ -1,9 +1,9 @@
-﻿using MoreLinq;
+﻿using DotNEET.Extensions;
+using MoreLinq;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-using DotNEET.Extensions;
 
 namespace DotNEET
 {
@@ -41,8 +41,9 @@ namespace DotNEET
         }
 
         /// <summary>
-        /// Remove all overlapping ranges to keep only the smallest atomic ranges
-        /// This mathematically isn't useful but it is when we need to get rid of some overlapping values in some cases
+        /// Remove all overlapping ranges to keep only the smallest atomic ranges This
+        /// mathematically isn't useful but it is when we need to get rid of some overlapping values
+        /// in some cases
         /// </summary>
         /// <typeparam name="TKey">The Key Range type</typeparam>
         /// <typeparam name="TValue">The Value Range type</typeparam>
@@ -63,15 +64,12 @@ namespace DotNEET
             return toReturn;
         }
 
-        /// <summary>
-        /// Merge multiple range into a smaller or equal number of ranges
-        /// Removing the overlapped ranges (values will be lost)
-        /// Beside the values, nothing should be lost (ex :  [0, 2] & [1, 3] cannot be merged, but [0, 2] & [1, 2] yes)
-        /// </summary>
-        /// <typeparam name="TKey">The Key Range type</typeparam>
-        /// <typeparam name="TValue">The Value Range type</typeparam>
-        /// <param name="source">Multiple ranges to merge</param>
-        /// <returns>The merged ranges</returns>
+        /// <summary> Merge multiple range into a smaller or equal number of ranges Removing the
+        /// overlapped ranges (values will be lost) Beside the values, nothing should be lost (ex :
+        /// [0, 2] & [1, 3] cannot be merged, but [0, 2] & [1, 2] yes) </summary> <typeparam
+        /// name="TKey">The Key Range type</typeparam> <typeparam name="TValue">The Value Range
+        /// type</typeparam> <param name="source">Multiple ranges to merge</param> <returns>The
+        /// merged ranges</returns>
         public static IEnumerable<Range<TKey, TValue>> MergeUp<TKey, TValue>(this IEnumerable<Range<TKey, TValue>> source)
             where TKey : IComparable<TKey>
         {
@@ -172,8 +170,7 @@ namespace DotNEET
         }
 
         /// <summary>
-        /// Returns 0 if value is in the specified range;
-        /// less than 0 if value is above the range;
+        /// Returns 0 if value is in the specified range; less than 0 if value is above the range;
         /// greater than 0 if value is below the range.
         /// </summary>
         public int CompareTo(TKey value)

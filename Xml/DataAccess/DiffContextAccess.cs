@@ -1,9 +1,7 @@
-﻿using DotNEET;
-using DotNEET.Extensions;
+﻿using DotNEET.Extensions;
 using MoreLinq;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -12,15 +10,16 @@ namespace DotNEET.Xml.DataAccess
     public abstract class DiffContextAccess<TDataContext> : IDisposable
         where TDataContext : IDataContext// The constraints may be trying too hard, but better safe than sorry
     {
-        private IReadOnlyDictionary<Guid, ModifyEntry> modifyById;
         private readonly TDataContext context;
-        
+
         // null if no parent
         private readonly DiffContextAccess<TDataContext> parent;
+
         // null if not parent
         private readonly IParentDiff parentDiff;
 
         private readonly Executer queryExecuter;
+        private IReadOnlyDictionary<Guid, ModifyEntry> modifyById;
 
         public DiffContextAccess(TDataContext context, DiffContextAccess<TDataContext> parent = null)
         {
@@ -28,7 +27,6 @@ namespace DotNEET.Xml.DataAccess
             this.context = context.ThrowIfNull("Context cannot be null");
             this.parentDiff = this.context.ParentDiff; // Can be null, and it's perfectly fine
             this.parent = parent;
-            
         }
 
         public void Delete<T>(Func<TDataContext, ICollection<T>> selector, IEnumerable<T> items) where T : XmlEntity

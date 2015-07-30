@@ -3,6 +3,7 @@
 namespace DotNEET.Xml
 {
     public delegate object FromStringDelegate(string str);
+
     public delegate string ToStringDelegate(object obj);
 
     //Used to override default serialization in diff process, superhacky

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 
 namespace DotNEET.Extensions
 {
@@ -26,14 +25,14 @@ namespace DotNEET.Extensions
             }
         }
 
-        public static string ThrowIfNullOrWhiteSpace(this string str, string description = null)
-        {
-            return str.ThrowIfTrue(string.IsNullOrWhiteSpace, "The string is not null or white space : " + (description ?? string.Empty));
-        }
-
         public static string ThrowIfNullOrEmpty(this string str, string description = null)
         {
             return str.ThrowIfTrue(string.IsNullOrEmpty, "The string is not null or white space : " + (description ?? string.Empty));
+        }
+
+        public static string ThrowIfNullOrWhiteSpace(this string str, string description = null)
+        {
+            return str.ThrowIfTrue(string.IsNullOrWhiteSpace, "The string is not null or white space : " + (description ?? string.Empty));
         }
     }
 }

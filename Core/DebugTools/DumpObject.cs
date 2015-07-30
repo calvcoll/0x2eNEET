@@ -35,7 +35,8 @@ namespace DotNEET.Debug
                     Trace.Indent();
                     toDump.GetType().GetProperties().ForEach(x =>
                         {
-                            // If field type is class and has not implemented tostring and not a value we do a recursive search
+                            // If field type is class and has not implemented tostring and not a
+                            // value we do a recursive search
                             if ((x.PropertyType.IsClass) && (x.PropertyType.GetMethod("ToString", new Type[0]).DeclaringType == typeof(object)))
                             {
                                 if (followRef)

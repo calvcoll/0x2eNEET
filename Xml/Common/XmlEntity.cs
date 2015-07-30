@@ -8,7 +8,6 @@ namespace DotNEET.Xml
     public abstract class XmlEntity : IEquatable<XmlEntity>
     {
         [XmlIgnore]
-        /// used to identify which context own this entity, object type because giving a real type is meaninless here
         private object owner;
 
         public XmlEntity()

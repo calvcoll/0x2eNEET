@@ -1,8 +1,6 @@
-﻿using System;
-using System.Diagnostics;
+﻿using DotNEET.Extensions;
+using System;
 using System.IO;
-using System.Linq;
-using DotNEET.Extensions;
 
 namespace DotNEET.Functions
 {

@@ -8,10 +8,11 @@ using System.Reflection;
 namespace DotNEET.Xml.Migrations
 {
     /// <summary>
-    /// This class retrieve migrations stored in code (the classes implementing IMigration in the constructor caller assembly)
-    /// Warning : This class most likely will try to apply ALL migration available, so if you have two different contexts
-    /// within one assembly, there might be collisions (you must check at runtime with casts or something)
-    /// Providing a namespace to filter migration is a todo
+    /// This class retrieve migrations stored in code (the classes implementing IMigration in the
+    /// constructor caller assembly) Warning : This class most likely will try to apply ALL
+    /// migration available, so if you have two different contexts within one assembly, there might
+    /// be collisions (you must check at runtime with casts or something) Providing a namespace to
+    /// filter migration is a todo
     /// </summary>
     public class MigrationExecuter
     {

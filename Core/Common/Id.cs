@@ -19,16 +19,6 @@ namespace DotNEET
             }
         }
 
-        public static implicit operator Id<T>(long id)
-        {
-            return new Id<T>(id);
-        }
-
-        public static implicit operator long(Id<T> id)
-        {
-            return id.Value;
-        }
-
         public static bool operator !=(Id<T> first, Id<T> second)
         {
             return !(first == second);
@@ -45,6 +35,16 @@ namespace DotNEET
                 return false;
             }
             return first.Equals(second);
+        }
+
+        public static implicit operator Id<T>(long id)
+        {
+            return new Id<T>(id);
+        }
+
+        public static implicit operator long (Id<T> id)
+        {
+            return id.Value;
         }
 
         public override bool Equals(object obj)

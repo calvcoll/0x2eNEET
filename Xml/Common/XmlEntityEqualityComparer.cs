@@ -20,7 +20,7 @@ namespace DotNEET.Xml
 
         public int GetHashCode(XmlEntity obj)
         {
-            if(object.ReferenceEquals(obj, null))
+            if (object.ReferenceEquals(obj, null))
             {
                 return 0;
             }

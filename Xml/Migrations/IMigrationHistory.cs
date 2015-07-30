@@ -14,7 +14,9 @@ namespace DotNEET.Xml.Migrations
         /// Check if migration has been applied or not
         /// </summary>
         /// <param name="migrationId">The migration id</param>
-        /// <returns>True if the migration has been applied (aka in the history), otherwise false</returns>
+        /// <returns>
+        /// True if the migration has been applied (aka in the history), otherwise false
+        /// </returns>
         bool HasMigration(Guid migrationId);
     }
 }

@@ -4,6 +4,11 @@ namespace DotNEET.Extensions
 {
     public static class NullableExts
     {
+        public static int NullableHashCode<T>(this T? nullable) where T : struct
+        {
+            return nullable.HasValue ? 0 : nullable.GetHashCode();
+        }
+
         public static T ThrowIfNull<T>(this T? value) where T : struct
         {
             return value.ThrowIfNull(string.Empty);
@@ -16,11 +21,6 @@ namespace DotNEET.Extensions
                 throw new ArgumentNullException(message);
             }
             return value.Value;
-        }
-
-        public static int NullableHashCode<T>(this T? nullable) where T : struct
-        {
-            return nullable.HasValue ? 0 : nullable.GetHashCode();
         }
     }
 }

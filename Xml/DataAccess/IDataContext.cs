@@ -3,6 +3,7 @@
     public interface IDataContext
     {
         IParentDiff ParentDiff { get; }
+
         void Sync();
     }
 }

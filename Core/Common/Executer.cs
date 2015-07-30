@@ -119,7 +119,6 @@ namespace DotNEET
                             this.toExecute.Dispose();
                             this.executerTaskCanceler.Dispose();
                         });
-
                 }
                 catch (Exception e)
                 {

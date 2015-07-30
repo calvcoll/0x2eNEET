@@ -72,7 +72,7 @@ namespace DotNEET.Xml
 
     public static class XmlFileAccessExts
     {
-        public static T Read<T>(this string xmlFilePath) 
+        public static T Read<T>(this string xmlFilePath)
         {
             return new XmlFileAccess<T>(xmlFilePath).Read();
         }

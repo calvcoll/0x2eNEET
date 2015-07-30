@@ -7,6 +7,11 @@ namespace DotNEET.Extensions
 {
     public static class IEnumerableExts
     {
+        public static int ComposedHashCode<T>(this IEnumerable<T> objs)
+        {
+            return Hashs.ComposedHashCode(objs.Cast<object>().ToArray());
+        }
+
         public static IEnumerable<T> IntersectMany<T>(this IEnumerable<IEnumerable<T>> src)
         {
             IEnumerable<T> ret = null;
@@ -74,11 +79,6 @@ namespace DotNEET.Extensions
         public static IList<TSource> ToIList<TSource>(this IEnumerable<TSource> src)
         {
             return src.ToList();
-        }
-
-        public static int ComposedHashCode<T>(this IEnumerable<T> objs)
-        {
-            return Hashs.ComposedHashCode(objs.Cast<object>().ToArray());
         }
     }
 }
